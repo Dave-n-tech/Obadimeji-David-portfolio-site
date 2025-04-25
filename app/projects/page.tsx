@@ -4,11 +4,22 @@ import QuizziaImg from "../../public/images/projectScrenshots/Quizzia.png";
 import CgpaCalculatorImg from "../../public/images/projectScrenshots/Cgpa Calculator.png";
 import ExpenseTrackerImg from "../../public/images/projectScrenshots/Expense Tracker.png";
 import ProjectCard from "../components/ProjectCard";
+import { StaticImageData } from "next/image";
+
+// type Project = {
+//   id: number;
+//   name: String;
+//   link: String;
+//   image: StaticImageData;
+//   description: String;
+//   languages: String[];
+// };
 
 const Projects = () => {
 
   const projects = [
     {
+      id: 1,
       name: "TrustView",
       link: "https://trust-view.vercel.app/",
       image: TrustViewImg,
@@ -25,6 +36,7 @@ const Projects = () => {
       ],
     },
     {
+      id: 2,
       name: "Quizzia",
       link: "https://quizzia-app.vercel.app/",
       image: QuizziaImg,
@@ -32,6 +44,7 @@ const Projects = () => {
       languages: ["Javascript", "React", "Html/Css", "Vite"],
     },
     {
+      id: 3,
       name: "Lasu CGPA Calculator",
       link: "https://cgpa-calculator-ten.vercel.app/",
       image: CgpaCalculatorImg,
@@ -39,6 +52,7 @@ const Projects = () => {
       languages: ["Javascript", "React", "Html/Css", "Vite"],
     },
     {
+      id: 4,
       name: "Expense Tracker",
       link: "https://expense-tracker-sigma-lemon-14.vercel.app/",
       image: ExpenseTrackerImg,
@@ -48,13 +62,16 @@ const Projects = () => {
   ];
 
   return (
-    <main className="container h-screen px-8 md:px-36 py-8">
-      <h1 className="text-4xl font-bold mb-6">Projects</h1>
-      <div className="w-full p-4 flex flex-col gap-4 md:flex-row border border-teal-600">
-        {/* card */}
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
+    <main className="container h-screen px-6 md:px-32 py-8">
+      <h1 className="text-5xl font-bold mb-6 text-center">Projects</h1>
+      <div className="py-4 px-4 md:py-4 md:px-0 flex flex-col gap-4 md:flex-row">
+        {
+          projects.map((project) => {
+            return (
+              <ProjectCard key={project.id} projectProp={project}/>
+            )
+          })
+        }
       </div>
     </main>
   );

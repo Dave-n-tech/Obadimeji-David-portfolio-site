@@ -1,37 +1,63 @@
-'use client'
-import Image from "next/image";
+"use client";
+import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
 import TrustViewImg from "../../public/images/projectScrenshots/TrustView.png";
 
-const ProjectCard = () => {
+type Project = {
+  id: number;
+  name: String;
+  link: String;
+  image: StaticImageData;
+  description: String;
+  languages: String[];
+};
+
+type Props = {
+  projectProp: Project;
+};
+
+const ProjectCard = ({ projectProp }: Props) => {
   const [isHovered, setIsHovered] = useState(false);
+  const { name, link, image, description, languages } = projectProp;
+
   return (
     <div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="relative md:w-2xl min-h-80 bg-black border border-amber-500"
+      className="relative w-full md:w-1/2  min-h-80 rounded-lg bg-slate-950"
     >
       <Image
-        src={TrustViewImg}
-        alt="Screenshot"
+        src={image}
+        alt={`${name} Screenshot`}
         fill
-        className={`object-cover object-center ${
+        className={`object-cover object-center rounded-lg ${
           isHovered ? "opacity-20" : "hover:opacity-100"
         }`}
       />
-      <div className="absolute bottom-3 left-3">
-        <h1 className="text-2xl font-bold mb-3">Project Title</h1>
-        <p className="text-[0.85rem] md:text-[1rem] mb-5">
-          Project Description Lorem ipsum dolor sit amet consectetur,
-          adipisicing elit. Aperiam officia ipsam repellendus itaque
+
+      <div
+        className={`absolute bottom-6 opacity-0 left-3 transition-[opacity] duration-150 ease-in ${
+          isHovered && "opacity-100"
+        }`}
+      >
+        <h1 className="text-2xl font-bold mb-3">{name}</h1>
+        <p className="text-[0.85rem] md:text-[14px] mb-5">
+          {description}
         </p>
-        <ul className="flex flex-row gap-4">
-          <li className="bg-gray-600 py-1 px-4 rounded-3xl text-[0.75rem]">
+        <ul className="flex flex-row flex-wrap gap-4">
+          {
+            languages.map((language, index) => {
+              return <li key={index} className="bg-gray-600 py-1 px-4 rounded-3xl text-[0.75rem]">
+              {language}
+            </li>
+            })
+          }
+          {/* <li className="bg-gray-600 py-1 px-4 rounded-3xl text-[0.75rem]">
             Html
           </li>
           <li className="bg-gray-600 py-1 px-4 rounded-3xl text-[0.75rem]">
             css
-          </li>
+          </li> */}
         </ul>
       </div>
     </div>
