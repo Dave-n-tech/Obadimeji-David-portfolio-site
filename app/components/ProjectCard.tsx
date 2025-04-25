@@ -2,11 +2,13 @@
 import Image, { StaticImageData } from "next/image";
 import { useState } from "react";
 import TrustViewImg from "../../public/images/projectScrenshots/TrustView.png";
+import Link from "next/link";
+import { Url } from "next/dist/shared/lib/router/router";
 
 type Project = {
   id: number;
   name: String;
-  link: String;
+  link: Url;
   image: StaticImageData;
   description: String;
   languages: String[];
@@ -24,14 +26,14 @@ const ProjectCard = ({ projectProp }: Props) => {
     <div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="relative w-full md:w-1/2  min-h-80 rounded-lg bg-slate-950"
+      className="relative min-h-80 rounded-lg bg-slate-950"
     >
       <Image
         src={image}
         alt={`${name} Screenshot`}
         fill
         className={`object-cover object-center rounded-lg ${
-          isHovered ? "opacity-20" : "hover:opacity-100"
+          isHovered ? "opacity-20" : "opacity-80"
         }`}
       />
 
@@ -40,7 +42,7 @@ const ProjectCard = ({ projectProp }: Props) => {
           isHovered && "opacity-100"
         }`}
       >
-        <h1 className="text-2xl font-bold mb-3">{name}</h1>
+        <h1 className="text-2xl font-bold mb-3">{name} <Link href={link} className="ml-1"><i className="bi bi-box-arrow-up-right"></i></Link></h1>
         <p className="text-[0.85rem] md:text-[14px] mb-5">
           {description}
         </p>
@@ -52,12 +54,6 @@ const ProjectCard = ({ projectProp }: Props) => {
             </li>
             })
           }
-          {/* <li className="bg-gray-600 py-1 px-4 rounded-3xl text-[0.75rem]">
-            Html
-          </li>
-          <li className="bg-gray-600 py-1 px-4 rounded-3xl text-[0.75rem]">
-            css
-          </li> */}
         </ul>
       </div>
     </div>

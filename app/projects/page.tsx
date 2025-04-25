@@ -5,6 +5,7 @@ import CgpaCalculatorImg from "../../public/images/projectScrenshots/Cgpa Calcul
 import ExpenseTrackerImg from "../../public/images/projectScrenshots/Expense Tracker.png";
 import ProjectCard from "../components/ProjectCard";
 import { StaticImageData } from "next/image";
+import DirectToNextPage from "../components/DirectToNextPage";
 
 // type Project = {
 //   id: number;
@@ -62,9 +63,9 @@ const Projects = () => {
   ];
 
   return (
-    <main className="container h-screen px-6 md:px-32 py-8">
+    <main className="container min-h-screen px-2 pt-8 pb-20 md:px-36">
       <h1 className="text-5xl font-bold mb-6 text-center">Projects</h1>
-      <div className="py-4 px-4 md:py-4 md:px-0 flex flex-col gap-4 md:flex-row">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-4 px-4 md:px-0">
         {
           projects.map((project) => {
             return (
@@ -73,6 +74,7 @@ const Projects = () => {
           })
         }
       </div>
+      <DirectToNextPage label="Contact me" url="/contact" />
     </main>
   );
 };
