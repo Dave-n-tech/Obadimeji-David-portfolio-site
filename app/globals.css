@@ -11,6 +11,22 @@
   }
 }
 
+/* contact page sliding notification */
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px); /* Start 50px to the right */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slideInRight {
+  animation: slideInRight 0.5s ease-out forwards;
+}
+
 
 .menu{
     @apply relative flex flex-row space-x-4 items-center justify-center
