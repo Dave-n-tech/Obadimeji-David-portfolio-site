@@ -31,7 +31,7 @@ const Navbar = () => {
       <nav
         className={`text-2xl h-screen fixed top-0 ${
           menuOpen ? "right-0" : "-right-96"
-        } bg-slate-200 text-black flex md:items-center px-32 py-16 z-10 transition-[right] duration-200 ease-in md:transition-none md:h-0 md:right-0 md:text-lg md:bg-transparent md:text-slate-400 md:px-0 md:py-0 md:relative`}
+        } bg-slate-200 text-black flex md:items-center px-32 py-16 z-50 transition-[right] duration-200 ease-in md:transition-none md:h-0 md:right-0 md:text-lg md:bg-transparent md:text-slate-400 md:px-0 md:py-0 md:relative`}
       >
         <ul
           className={`flex flex-col items-center space-y-6 

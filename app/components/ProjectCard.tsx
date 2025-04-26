@@ -37,7 +37,7 @@ const ProjectCard = ({ projectProp }: Props) => {
   }, []);
 
   const showInfo = isLargeScreen ? isHovered : true;
-  const imageOpacity = isLargeScreen ? (isHovered ? "opacity-20" : "opacity-80") : "opacity-30";
+  const imageOpacity = isLargeScreen ? (isHovered ? "opacity-100" : "opacity-0") : "opacity-80";
 
   return (
     <div
@@ -49,17 +49,20 @@ const ProjectCard = ({ projectProp }: Props) => {
         src={image}
         alt={`${name} Screenshot`}
         fill
-        className={`object-cover object-center rounded-lg transition-opacity duration-300 ${imageOpacity}`}
+        className={`object-cover object-center rounded-lg z-0`}
       />
 
+      {/* Gradient Overlay */}
+      <div className={`${imageOpacity} absolute inset-0 bg-gradient-to-b from-white/50 via-black/70 to-black/80 z-10`} />
+
       <div
-        className={`absolute bottom-6 left-3 right-3 transition-opacity duration-200 ${
+        className={`absolute bottom-6 left-3 right-3 z-20 transition-opacity duration-200 ${
           showInfo ? "opacity-100" : "opacity-0"
         }`}
       >
         <h1 className="text-2xl font-bold mb-3 text-white">
           {name}
-          <Link href={link} className="ml-1 text-white">
+          <Link href={link} className="ml-1 text-white hover:text-teal-500">
             <i className="bi bi-box-arrow-up-right"></i>
           </Link>
         </h1>
