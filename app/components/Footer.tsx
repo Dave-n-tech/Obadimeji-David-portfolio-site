@@ -26,7 +26,7 @@ const Footer = () => {
   ];
   return (
     <footer className="w-full bg-slate-950 md:bg-transparent fixed bottom-0 px-10 md:px-12 py-4">
-      <div className="w-full space-x-8 flex items-center justify-start">
+      <div className="w-full space-x-8 flex items-center justify-between md:justify-start">
         {socialLinks.map((link) => {
           return (
             <Link key={link.site} href={link.url}>

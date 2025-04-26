@@ -1,6 +1,7 @@
 import Image from "next/image";
 import profileImg from "../../public/images/My headshot.jpg";
 import DirectToNextPage from "../components/DirectToNextPage";
+import Link from "next/link";
 
 const About = () => {
   return (
@@ -20,7 +21,19 @@ const About = () => {
 
           {/* right */}
           <div className="w-full md:w-1/2">
-            <h1 className="text-2xl md:text-3xl font-semibold mb-3">About me</h1>
+            <Link
+              href={
+                "https://docs.google.com/document/d/1J5VmxE3cf2dKb4PWO3Ai7-e2YYm3xbdi5riCsIAAp7M/edit?usp=sharing"
+              }
+              className="hover:underline"
+            >
+              <h1 className="text-2xl md:text-3xl font-semibold mb-3">
+                About me
+                <span className="ml-2 mb-4 text-3xl text-white hover:text-teal-500">
+                  <i className="bi bi-box-arrow-up-right text-lg"></i>
+                </span>
+              </h1>
+            </Link>
             <p>
               I'm a Full-Stack Developer with nearly three years of experience
               building web applications using modern technologies like React,
@@ -30,7 +43,7 @@ const About = () => {
             </p>
             <br />
             <p>
-              I’m a creative thinker with a sharp eye for detail and a strong
+              I’m a creative thinker with a keen eye for detail and a strong
               sense of logic. I enjoy finding the balance between form and
               function, drawing from my interests in photography, design,
               coding, and mathematics. Whether I'm working solo or as part of a
