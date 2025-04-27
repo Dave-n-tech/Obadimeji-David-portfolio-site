@@ -6,7 +6,7 @@ import Link from "next/link";
 const About = () => {
   return (
     <main className="container max-h-screen md:mb-2">
-      <section className="flex flex-col pb-24 md:pb-8">
+      <section className="flex flex-col pb-16 md:pb-10">
         <div className="md:h-[26rem] pt-8 pb-8 px-10 md:px-32 flex flex-col md:flex-row gap-10">
           {/* left */}
           <div className="relative w-full md:w-1/2 min-h-72 md:h-full">
@@ -15,7 +15,6 @@ const About = () => {
               alt="My portrait image"
               fill
               className="object-cover object-top rounded-xl"
-              // sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
 

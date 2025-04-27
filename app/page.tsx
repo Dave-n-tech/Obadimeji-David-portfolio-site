@@ -5,10 +5,10 @@ export default function Home() {
   return (
     <main className="container overflow-hidden px-6 pt-4">
       <section className="flex flex-col items-center mx-auto pt-8 pb-5">
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-2 md:mb-4">
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-2 md:mb-4 text-center tracking-widest md:tracking-wider">
           OBADIMEJI DAVID
         </h1>
-        <p className="text-lg md:text-3xl font-semibold text-teal-500 tracking-widest md:tracking-wider">
+        <p className="text-lg text-center md:text-3xl font-semibold text-teal-500 tracking-widest md:tracking-wider">
           FULLSTACK SOFTWARE ENGINEER
         </p>
 
