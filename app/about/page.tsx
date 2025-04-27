@@ -5,9 +5,9 @@ import Link from "next/link";
 
 const About = () => {
   return (
-    <main className="container max-h-screen md:mb-2">
-      <section className="flex flex-col pb-16 md:pb-10">
-        <div className="md:h-[26rem] pt-8 pb-8 px-10 md:px-32 flex flex-col md:flex-row gap-10">
+    <main className="container max-h-screen md:mb-2 mx-auto">
+      <section className="flex flex-col pb-16 md:pb-12">
+        <div className="md:h-[26rem] pt-6 pb-8 px-10 md:px-14 md:text-[14px] flex flex-col md:flex-row gap-10">
           {/* left */}
           <div className="relative w-full md:w-1/2 min-h-72 md:h-full">
             <Image

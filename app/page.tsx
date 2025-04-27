@@ -3,7 +3,7 @@ import DirectToNextPage from "./components/DirectToNextPage";
 
 export default function Home() {
   return (
-    <main className="container overflow-hidden px-6 pt-4">
+    <main className="container overflow-hidden px-6 pt-4 mx-auto">
       <section className="flex flex-col items-center mx-auto pt-8 pb-5">
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-2 md:mb-4 text-center tracking-widest md:tracking-wider">
           OBADIMEJI DAVID
