@@ -34,7 +34,7 @@ const About = () => {
               </h1>
             </Link>
             <p>
-              I'm a Full-Stack Developer with nearly three years of experience
+              I'm a Full-Stack Developer with two years of experience
               building web applications using modern technologies like React,
               Tailwind CSS, Node.js, and Express.js. I focus on creating clean,
               user-friendly interfaces and functional solutions that solve
