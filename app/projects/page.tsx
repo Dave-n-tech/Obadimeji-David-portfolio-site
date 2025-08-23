@@ -2,7 +2,7 @@ import React from "react";
 import TrustViewImg from "../../public/images/projectScrenshots/TrustView.png";
 import QuizziaImg from "../../public/images/projectScrenshots/Quizzia.png";
 import CgpaCalculatorImg from "../../public/images/projectScrenshots/Cgpa Calculator.png";
-import ExpenseTrackerImg from "../../public/images/projectScrenshots/Expense Tracker.png";
+import FIntrackImg from "../../public/images/projectScrenshots/Fintrack.png"
 import ProjectCard from "../components/ProjectCard";
 import { StaticImageData } from "next/image";
 import DirectToNextPage from "../components/DirectToNextPage";
@@ -21,6 +21,20 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
+      name: "Fintrack",
+      link: "https://personal-budget-tracker-rust.vercel.app/",
+      image: FIntrackImg,
+      description: "An intuitive and user-friendly budget tracking applcation to help users effectively manage their finances and set budgets for spending",
+      languages: [
+        "Typescript",
+        "React",
+        "Tailwind",
+        "Appwrite",
+        "Vite"
+      ]
+    },
+    {
+      id: 2,
       name: "TrustView",
       link: "https://trust-view.vercel.app/",
       image: TrustViewImg,
@@ -37,7 +51,7 @@ const Projects = () => {
       ],
     },
     {
-      id: 2,
+      id: 3,
       name: "Quizzia",
       link: "https://quizzia-app.vercel.app/",
       image: QuizziaImg,
@@ -45,19 +59,11 @@ const Projects = () => {
       languages: ["Javascript", "React", "Html/Css", "Vite"],
     },
     {
-      id: 3,
+      id: 4,
       name: "Lasu CGPA Calculator",
       link: "https://cgpa-calculator-ten.vercel.app/",
       image: CgpaCalculatorImg,
       description: "CGPA calculator for Lagos state university",
-      languages: ["Javascript", "React", "Html/Css", "Vite"],
-    },
-    {
-      id: 4,
-      name: "Expense Tracker",
-      link: "https://expense-tracker-sigma-lemon-14.vercel.app/",
-      image: ExpenseTrackerImg,
-      description: "An simple expense tracking app",
       languages: ["Javascript", "React", "Html/Css", "Vite"],
     },
   ];
