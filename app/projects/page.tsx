@@ -1,10 +1,9 @@
 import React from "react";
 import TrustViewImg from "../../public/images/projectScrenshots/TrustView.png";
 import QuizziaImg from "../../public/images/projectScrenshots/Quizzia.png";
-import CgpaCalculatorImg from "../../public/images/projectScrenshots/Cgpa Calculator.png";
+import LasuLearnImg from "../../public/images/projectScrenshots/Lasulearn.png";
 import FIntrackImg from "../../public/images/projectScrenshots/Fintrack.png"
 import ProjectCard from "../components/ProjectCard";
-import { StaticImageData } from "next/image";
 import DirectToNextPage from "../components/DirectToNextPage";
 
 // type Project = {
@@ -21,6 +20,23 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
+      name: "LASULEARN",
+      link: "https://lasuvlp-2-0-client.vercel.app/",
+      image: LasuLearnImg,
+      description: "Full stack virtual learning platform for Lagos State University to facilitate course delivery and learning for both students and lecturers",
+      languages: [
+        "Typescript",
+        "Nextjs",
+        "Tailwind",
+        "Prisma",
+        "Postgresql",
+        "Nodejs",
+        "Express",
+        "Cloudinary"
+      ]
+    },
+    {
+      id: 2,
       name: "Fintrack",
       link: "https://personal-budget-tracker-rust.vercel.app/",
       image: FIntrackImg,
@@ -34,7 +50,7 @@ const Projects = () => {
       ]
     },
     {
-      id: 2,
+      id: 3,
       name: "TrustView",
       link: "https://trust-view.vercel.app/",
       image: TrustViewImg,
@@ -51,19 +67,11 @@ const Projects = () => {
       ],
     },
     {
-      id: 3,
+      id: 4,
       name: "Quizzia",
       link: "https://quizzia-app.vercel.app/",
       image: QuizziaImg,
       description: "An exciting trivia game built using open trivia api",
-      languages: ["Javascript", "React", "Html/Css", "Vite"],
-    },
-    {
-      id: 4,
-      name: "Lasu CGPA Calculator",
-      link: "https://cgpa-calculator-ten.vercel.app/",
-      image: CgpaCalculatorImg,
-      description: "CGPA calculator for Lagos state university",
       languages: ["Javascript", "React", "Html/Css", "Vite"],
     },
   ];
