@@ -21,7 +21,7 @@ const ProjectCard = ({ projectProp }: Props) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isLargeScreen, setIsLargeScreen] = useState(false);
 
-  const { name, link, image, description, languages } = projectProp;
+  const { name, link, image, description, languages, id } = projectProp;
 
   // Detect screen size (true if md and above)
   useEffect(() => {
@@ -54,7 +54,7 @@ const ProjectCard = ({ projectProp }: Props) => {
           src={image}
           alt={`${name} Screenshot`}
           fill
-          className={`object-cover object-center rounded-lg z-0`}
+          className={`${id === 1 ? "object-center" : "object-left"} object-cover rounded-lg z-0`}
         />
 
         {/* Gradient Overlay */}
