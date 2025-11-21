@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import MouseTracker from "./components/MouseTracker";
+import { Toaster } from "react-hot-toast";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,6 +42,7 @@ export default function RootLayout({
         <MouseTracker />
         {children}
         <Footer />
+        <Toaster position="top-right" />
       </body>
     </html>
   );
